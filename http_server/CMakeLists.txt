@@ -9,6 +9,7 @@ set(HTTP_SERVER_INC_FOLDER ${HTTP_SERVER_FOLDER}/inc CACHE INTERNAL "")
 include_directories(
     ${HTTP_SERVER_INC_FOLDER}
     ${UTILS_INC_FOLDER}
+    ${HTTP_PARSER_INC_FOLDER}
 )
 
 set (header_files
@@ -21,4 +22,7 @@ set (source_files
 
 add_library(httpserver ${source_files} ${header_files})
 
-target_link_libraries(utils)
+target_link_libraries(httpserver
+    utils
+    httpparser
+)
