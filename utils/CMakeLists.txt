@@ -11,10 +11,12 @@ include_directories(${UTILS_INC_FOLDER})
 set (header_files
     ./inc/logging.h
     ./inc/result.h
+    ./inc/list.h
 )
 
 set (source_files 
     ./src/logging.c
+    ./src/list.c
 )
 
 add_library(utils ${source_files} ${header_files})
